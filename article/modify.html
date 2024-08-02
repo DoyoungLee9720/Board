@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .container {
+            width: 800px;
+            height: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        header {
+            display: flex; /* 플렉스 박스를 사용 */
+            justify-content: space-between; /* 양쪽 끝 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            text-align: left; /* 왼쪽 정렬 */
+        }
+        .greeting {
+            font-size: 10px;
+            color: #555;
+            text-align: right; /* 오른쪽 정렬 */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #f9f9f9;
+            text-align: center;
+        }
+        input[type="text"], textarea {
+            width: calc(100% - 20px); 
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4b545e;
+            color: white;
+            padding: 10px 15px;
+            border: 1px solid black;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button.cancel {
+            background-color: #fff; 
+            color: black;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        button.cancel:hover {
+            opacity: 0.9;
+        }
+        footer {
+            display: flex; /* 플렉스 박스를 사용 */
+            justify-content: space-between; /* 양쪽 끝 정렬 */
+            margin-top: 60px;
+            font-size: 12px;
+            color: #777;
+        }
+        .button-container {
+            text-align: right; /* 버튼을 오른쪽 정렬 */
+        }
+        .logout {
+            cursor: pointer; /* 커서를 포인터로 변경 */
+        }
+        .logout:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h6>Board System</h6>
+        <div class="greeting">
+            홍길동님 반갑습니다. <span class="logout" onclick="logout()">[로그아웃]</span> <!-- 텍스트 링크로 변경 -->
+        </div>
+    </header>
+    <h2>글수정</h2>
+    <table>
+        <tr>
+            <th>제목</th>
+            <td><input type="text" placeholder="제목을 입력하세요."></td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td><textarea rows="20" placeholder="내용을 입력하세요."></textarea></td>
+        </tr>
+        <tr>
+            <th>파일</th>
+            <td><input type="file"></td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button class="cancel">취소</button>
+        <button>작성완료</button>
+    </div>
+    <footer>
+        <span>Copyright © 이도영(개발에반하다.)</span>
+        <span>v1.0.1</span>
+    </footer>
+</div>
+</body>
+</html>

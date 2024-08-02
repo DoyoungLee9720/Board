@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board System</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    h1, h2, h3, h6 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .greeting {
+        font-size: 12px;
+        color: #555;
+        text-align: right;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background: #f9f9f9;
+        text-align: center;
+    }
+
+    .fileLabel {
+        font-size: 12px;
+        color: #555;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    input[type="text"], textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 1.5;
+        resize: none;
+    }
+
+    button {
+        background-color: #4b545e;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    button.optionButton {
+        background-color: #fff;
+        color: black;
+        border: 1px solid #4b545e;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        font-size: 12px;
+        color: #777;
+    }
+
+    .button-container {
+        text-align: right;
+    }
+
+    .logout {
+        cursor: pointer;
+        
+    }
+
+    .logout:hover {
+        text-decoration: underline;
+    }
+
+    .comment-section {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+
+    .comment-list {
+        margin-bottom: 20px;
+    }
+
+    .comment {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        padding: 5px 0;
+    }
+
+    .comment-date {
+        font-size: 10px;
+        color: #aaa;
+    }
+
+    .comment-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comment-input textarea {
+        margin-right: 10px;
+    }
+
+    .content-box {
+        height: 400px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow: auto;
+    }
+
+    .no-comments {
+        text-align: center;
+        margin-top: 10px;
+        color: #555;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h6>Board System</h6>
+        <div class="greeting">
+            홍길동님 반갑습니다. <span class="logout" onclick="logout()">[로그아웃]</span>
+        </div>
+    </header>
+    
+    <h2>글보기</h2>
+    <table>
+        <tr>
+            <th>제목</th>
+            <td>
+                <label>제목을 입력하세요.</label>
+            </td>
+        </tr>
+        <tr>
+            <th>파일</th>
+            <td>
+                <label class="fileLabel">2020년 상반기 매출자료.xls 7회 다운로드</label>
+            </td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>
+                <div class="content-box"></div>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="button-container">
+        <button class="optionButton">삭제</button>
+        <button class="optionButton">수정</button>
+        <button class="optionButton">목록</button>
+    </div>
+
+    <div class="comment-section">
+        <h3>댓글목록</h3>
+        <div class="comment-list">
+            <div class="comment">
+                <div>길동이 <span class="comment-date">20-05-20</span></div>
+                <div>댓글 샘플입니다.</div>
+                <div class="button-container">
+                    <button class="optionButton">수정</button>
+                    <button class="optionButton">목록</button>
+                </div>
+                
+                <div class="no-comments">등록된 댓글이 없습니다.</div>
+            </div>
+            
+            
+        </div>
+           
+        <h3>댓글쓰기</h3>
+        <div class="comment-input">
+            <textarea rows="3" placeholder="댓글을 입력하세요."></textarea>
+            <div class="button-group">
+                <button class="optionButton">취소</button>
+                <button class="">작성완료</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span>Copyright © 이도영(개발에반하다.)</span>
+        <span>v1.0.1</span>
+    </footer>
+</div>
+
+<script>
+    function logout() {
+        alert("로그아웃 되었습니다."); // 예시
+    }
+</script>
+
+</body>
+</html>
