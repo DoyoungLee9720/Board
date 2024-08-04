@@ -30,54 +30,173 @@
     main {
       width: 600px;
       height: 578px;
-      border: 1px solid black;
       box-sizing: border-box;
       margin: 0 auto;
       margin-top: 95px;
+      
+      position: relative;
     }
 
     form {
-      border: 1px solid red;
       box-sizing: border-box;
       margin-top: 16px;
       height: 507px;
     }
+    p{
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    header {
+      margin: 0 auto;
+      width: 800px;
+    }
+    .title {
+    }
     .myInfoSet {
       width: 100%;
-      border: 1px solid green;
+      border: 2px solid black;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .myInfoChan{
+      width: 100%;
+      border: 2px solid black;
       box-sizing: border-box;
     }
-    table, thead, tbody, th, td, tr {
-    display: block;
-  }
-  thead {
-    float: left;
-    white-space: nowrap;
-  }
+    table{
+    border-collapse: collapse;
+    }
+    .addr{
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+    .findAddr{
+      display: inline-block;
+    }
+    .addr:nth-child(3){
+      display: block;
+      width : 362px;
+    }
+    .addr:nth-child(4){
+      display: block;
+      width : 362px;
+      margin-bottom: 0px;
+    }
+    th, td {
+      border: 1px solid #E9E9E9;
+    }
+    .col1 {
+    background-color: #F5F8F9;
+    padding : 4px 0;
+    padding-left: 12px;
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 105px;
+    height: auto;
+    }
+    .col2 {
+    text-align: left;
+    padding : 5px 5px;
+    }
+    .nicknameP {
+      margin : 0 0;
+      margin-bottom: 3px;
+    }
+    input {
+      width: 164px;
+      height: 24px;
+      border: 1px solid #E4EAEC;
+      background-color: #F7F7F7;
+    }
+    input::placeholder {
+      color: #757575;
+      text-indent: 6px;
+    }
+    .changePass{
+      width: 85px;
+      height: 27px;
+      background-color: #2E658A;
+      color : #FFFFFF;
+    }
+    .userOut {
+      width: 58px;
+      height: 27px;
+      background-color: #ED2F2F;
+      color : #FFFFFF;
+    }
+    .nicknameButton {
+      background-image: url("/images/chk_id.gif");
+      width: 60px;
+      height: 20px;
+      background-repeat: no-repeat;
+      border: none;
+      background-color: #FFFFFF;
+    }
+    .emailButton {
+      background-image: url("/images/chk_auth.gif");
+      width: 80px;
+      height: 20px;
+      background-repeat: no-repeat;
+      border: none;
+      background-color: #FFFFFF;
+    }
+    .findAddr {
+      background-image: url("/images/chk_post.gif");
+      width: 80px;
+      height: 20px;
+      background-repeat: no-repeat;
+      border: none;
+      background-color: #FFFFFF;
+    }
+    .confirm {
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      width: 66px;
+      height: 35px;
+      background-color: #EFEFEF;
+      border: 1px solid #BEBEBE ;
+    }
+    .cancle {
+      position: absolute;
+      right: 68px;
+      bottom: 0px;
+      height: 35px;
+      width: 42px;
+      background-color: #fff;
+      border: 1px solid #BEBEBE ;
+    }
+    footer {
+      width: 800px;
+      margin: 0 auto;
+      color: #777777;
+    }
   </style>
 </head>
 
 <body>
+  <header><p class="title">Board System</p></header>
+  
   <main>
     <section>
       <form action="#">
         <p>회원정보 설정</p>
         <table class="myInfoSet">
             <tr>
-              <td class="col1">아이디asdfasdf</td>
+              <td class="col1">아이디</td>
               <td class="col2">abc</td>
             </tr>
             <tr>
               <td class="col1">비밀번호</td>
               <td class="col2">
-                  <input type="password" name="pswd" maxlength="16">
+                  <input type="password" name="pswd" maxlength="16" placeholder="비밀번호 입력">
               </td>
             </tr>
             <tr>
               <td class="col1">비밀번호 확인</td>
               <td class="col2">
-                  <input type="password" name="pswdCheck" maxlength="16">
-                  <input class='but1' type="button" value="비밀번호 수정" onclick="">
+                  <input type="password" name="pswdCheck" maxlength="16" placeholder="비밀번호 입력 확인">
+                  <input class='changePass' type="button" value="비밀번호 수정" onclick="">
               </td>
             </tr>
             <tr>
@@ -96,43 +215,48 @@
           <tr>
             <td class="col1">별명</td>
             <td class="col2">
-                <p>공백없는 한글, 영문, 숫자 입력</p>
-                <input type="text" name="nickname" maxlength="16">
-                <input class='but1' type="button" value="중복확인" onclick="">
+                <p class="nicknameP">공백없는 한글, 영문, 숫자 입력</p>
+                <input type="text" name="nickname" maxlength="16" placeholder="별명 입력">
+                <input class='nicknameButton' type="button"  onclick="">
             </td>
           </tr>
           <tr>
             <td class="col1">이메일</td>
             <td class="col2">
-                <input type="text" name="email" maxlength="16">
-                <input class='but1' type="button" value="인증번호 받기" onclick="">
+                <input type="text" name="email" maxlength="16" placeholder="이메일 입력">
+                <input class='emailButton' type="button"  onclick="">
             </td>
           </tr>
           <tr>
             <td class="col1">휴대폰</td>
             <td class="col2">
-                <input type="text" name="phone" maxlength="30">
+                <input type="text" name="phone" maxlength="30" placeholder="휴대폰 입력">
             </td>
           </tr>
           <tr>
             <td class="col1">주소</td>
             <td class="col2">
-              <input type="text" name="ZIP" maxlength="30">
-              <input type="text" name="addr" maxlength="30">
-              <input type="text" name="addrMore" maxlength="30">
+              <input type="text" name="ZIP" maxlength="30" class="addr" placeholder="우편번호">
+              <input class='findAddr' type="button"  onclick="">
+              <input type="text" name="addr" maxlength="30" class="addr" placeholder="주소 검색">
+              <input type="text" name="addrMore" maxlength="30" class="addr" placeholder="상세주소 입력">
             </td>
           </tr>
           <tr>
-            <td class="col1">주소</td>
+            <td class="col1">회원탈퇴</td>
             <td class="col2">
-              <input class='but1' type="button" value="탈퇴하기" onclick="">
+              <input class="userOut" type="button"  value="탈퇴하기" onclick="" >
             </td>
           </tr>
       </table>
+      
+      <input class="cancle" type="button"  value="취소" onclick="" >
+      <input class="confirm" type="button"  value="회원수정" onclick="" >
       </form>
-
     </section>
   </main>
+  <footer><p class="copyRight">ⓒCopyright chhak.or.kr</p></footer>
+  
 </body>
 
 </html>
