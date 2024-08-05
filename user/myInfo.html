@@ -101,8 +101,8 @@
     .nicknameP {
       margin : 0 0;
       margin-bottom: 3px;
-    }
-    input {
+    } 
+    input.txt { 
       width: 164px;
       height: 24px;
       border: 1px solid #E4EAEC;
@@ -117,17 +117,23 @@
       height: 27px;
       background-color: #2E658A;
       color : #FFFFFF;
+      border: none;
+    }
+    .button:hover{
+      opacity: 80%;
+      cursor: pointer;
     }
     .userOut {
       width: 58px;
       height: 27px;
       background-color: #ED2F2F;
       color : #FFFFFF;
+      border: none;
     }
     .nicknameButton {
       background-image: url("/images/chk_id.gif");
       width: 60px;
-      height: 20px;
+      height: 19px;
       background-repeat: no-repeat;
       border: none;
       background-color: #FFFFFF;
@@ -135,7 +141,7 @@
     .emailButton {
       background-image: url("/images/chk_auth.gif");
       width: 80px;
-      height: 20px;
+      height: 19px;
       background-repeat: no-repeat;
       border: none;
       background-color: #FFFFFF;
@@ -143,11 +149,13 @@
     .findAddr {
       background-image: url("/images/chk_post.gif");
       width: 80px;
-      height: 20px;
+      height: 19px;
       background-repeat: no-repeat;
       border: none;
       background-color: #FFFFFF;
+      margin: auto 0;
     }
+
     .confirm {
       position: absolute;
       right: 0;
@@ -165,7 +173,7 @@
       width: 42px;
       background-color: #fff;
       border: 1px solid #BEBEBE ;
-    }
+    } 
     footer {
       width: 800px;
       margin: 0 auto;
@@ -196,7 +204,7 @@
               <td class="col1">비밀번호 확인</td>
               <td class="col2">
                   <input type="password" name="pswdCheck" maxlength="16" placeholder="비밀번호 입력 확인">
-                  <input class='changePass' type="button" value="비밀번호 수정" onclick="">
+                  <input class='button changePass' type="button" value="비밀번호 수정" onclick="">
               </td>
             </tr>
             <tr>
@@ -216,42 +224,42 @@
             <td class="col1">별명</td>
             <td class="col2">
                 <p class="nicknameP">공백없는 한글, 영문, 숫자 입력</p>
-                <input type="text" name="nickname" maxlength="16" placeholder="별명 입력">
-                <input class='nicknameButton' type="button"  onclick="">
+                <input class="txt" type="text" name="nickname" maxlength="16" placeholder="별명 입력">
+                <input class='button nicknameButton' type="button" value="" onclick="">
             </td>
           </tr>
           <tr>
             <td class="col1">이메일</td>
             <td class="col2">
-                <input type="text" name="email" maxlength="16" placeholder="이메일 입력">
-                <input class='emailButton' type="button"  onclick="">
+                <input class="txt" type="text" name="email" maxlength="16" placeholder="이메일 입력">
+                <input class='button emailButton' type="button"  onclick="">
             </td>
           </tr>
           <tr>
             <td class="col1">휴대폰</td>
             <td class="col2">
-                <input type="text" name="phone" maxlength="30" placeholder="휴대폰 입력">
+                <input class="txt" type="text" name="phone" maxlength="30" placeholder="휴대폰 입력">
             </td>
           </tr>
           <tr>
             <td class="col1">주소</td>
             <td class="col2">
-              <input type="text" name="ZIP" maxlength="30" class="addr" placeholder="우편번호">
-              <input class='findAddr' type="button"  onclick="">
-              <input type="text" name="addr" maxlength="30" class="addr" placeholder="주소 검색">
-              <input type="text" name="addrMore" maxlength="30" class="addr" placeholder="상세주소 입력">
+              <input class="txt addr" type="text" name="ZIP" maxlength="30" placeholder="우편번호">
+              <input class='button findAddr' type="button"  onclick="">
+              <input class="txt addr" type="text" name="addr" maxlength="30"  placeholder="주소 검색">
+              <input class="txt addr" type="text" name="addrMore" maxlength="30"  placeholder="상세주소 입력">
             </td>
           </tr>
           <tr>
             <td class="col1">회원탈퇴</td>
             <td class="col2">
-              <input class="userOut" type="button"  value="탈퇴하기" onclick="" >
+              <input class="button userOut" type="button"  value="탈퇴하기" onclick="" >
             </td>
           </tr>
       </table>
       
-      <input class="cancle" type="button"  value="취소" onclick="" >
-      <input class="confirm" type="button"  value="회원수정" onclick="" >
+      <input class="button cancle" type="button"  value="취소" onclick="" >
+      <input class="button confirm" type="button"  value="회원수정" onclick="" >
       </form>
     </section>
   </main>
