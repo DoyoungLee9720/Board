@@ -12,13 +12,14 @@
             background-color: #fff;
         }
         .container {
-            width: 800px;
-            height: 500px;
+            max-width: 800px;
             margin: auto;
             background: #fff;
             padding: 20px;
             border-radius: 5px;
+            
         }
+
         header {
             display: flex; /* 플렉스 박스를 사용 */
             justify-content: space-between; /* 양쪽 끝 정렬 */
@@ -72,8 +73,8 @@
             opacity: 0.9;
         }
         footer {
-            display: flex; /* 플렉스 박스를 사용 */
-            justify-content: space-between; /* 양쪽 끝 정렬 */
+            display: flex;
+            justify-content: space-between;
             margin-top: 60px;
             font-size: 12px;
             color: #777;
@@ -114,8 +115,8 @@
         </tr>
     </table>
     <div class="button-container">
-        <button class="cancel">취소</button>
-        <button>작성완료</button>
+        <button class="cancel" onclick="location.href='list.html'">취소</button>
+        <button onclick="location.href='list.html'">작성완료</button>
     </div>
     <footer>
         <span>Copyright © 이도영(개발에반하다.)</span>
