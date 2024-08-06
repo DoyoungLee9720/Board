@@ -7,6 +7,10 @@
     <style>
     
   
+    *{
+       font-size: 12px; 
+       font-family: '맑은 고딕'
+    }
    
     main{
         width: 100%;
@@ -24,7 +28,7 @@
     #uid > form{
         width: 600px;
         height: auto;
-       
+        
         padding: 10px;
         box-sizing: border-box;
     }
@@ -33,31 +37,81 @@
         border: 1px solid black;
         box-sizing: border-box;
     }
-    .highlight{
+    .uid, .pass, .newpass {
+        background: #f0f0f0;
         width: 105px;
         height: 37px;
-        background-color: #f0f0f0;
-        justify-content: center;
+
     }
-    .highlight1{
+    .name, .nicname, .email, .hp{
+        background: #f0f0f0;
+        width: 105px; 
+        height: 37px;
+    }
+    main * input{
+    width: 164px;
+    height: 17px;
+
+    }
+    main * td{
+        position: relative;
+    }
+    .centered-link1{
+        position: absolute;;
+        top: 10px;
+        left: 178px;
+    }    
+    .centered-link2{
+        position: absolute;;
+        top: 43px;
+        left: 178px;
+    }    
+    .centered-link3{
+        position: absolute;;
+        top: 10px;
+        left: 178px;
+    }    
+    .centered-link4{
+        position: absolute;;
+        top: 6px;
+        left: 178px;
+    }    
+
+    .inputlight{
+        width: 360px;
+        height: 17px;
+    }
+    .addr{
         background-color: #f0f0f0;
         justify-content: center;
         height: 93px;
     }
-    .highlight3{
-        background-color: #f0f0f0;
-        justify-content: center;
-        height: 
-    }
+
+    
     #uid > div:nth-last-child(1){
         float: right;
     }
+    .nameText{
+        font-size: 12px;
+        font: inter;
+        font-family: '맑은 고딕';
+        font-weight: bold; /* 두꺼운 폰트 설정 */
+    }
     .but1{
-        background: #f0f0f0;
+        width: 42px;
+        height: 35px;
+        border: 1px solid #bebebe;
+        font-size: 12px;
+        background: white;
     }
     .but2{
-        background: #f0f0f0;
+        border: 1px solid #bebebe;
+        background: #efefef;
+        width: 66px;
+        height: 35px;
+        font-size: 12px;
     }
+    
     footer{
        width: 100%;
        height: auto;
@@ -71,6 +125,18 @@
       
         
     }
+    table > tr > .addr{
+        padding: 10px;
+    vertical-align: middle; /* 세로 중앙 정렬 */
+    text-align: center; /* 가로 중앙 정렬 (선택 사항) */
+    }
+   
+
+
+
+
+
+    
     </style>
 </head>
 <body>
@@ -80,39 +146,64 @@
                 <div><p>사이트 이용정보 입력 </p></div>
                 <table>
                     <tr>
-                        <td class="highlight">아이디</td>
-                    <td><input class="highlight3" type="text" name="uid" value="아이디 입력"><button type="submit">중복확인</button></td>
+                        <td class="uid">아이디</td>
+                    <td><input class="input-uid" type="text" name="uid" placeholder="아이디 입력">
+                        <a href="#" class="centered-link1">
+                            <img src="../images/chk_id.gif" alt="">
+                        </a>
+                    </td>
                </tr>
                <tr>
-                    <td class="highlight">비밀번호</td>
-                    <td><input  class="highlight3" type="text" name="uid" value="비밀번호 입력"></td>
+                    <td class="pass">비밀번호</td>
+                    <td><input  class="input-pass" type="text" name="uid" placeholder="비밀번호 입력"></td>
                </tr>
                <tr>
-               <td class="highlight">비밀번호 확인</td>
-               <td ><input class="highlight3" type="test" name="pass" value="비밀번호 입력 확인"></td>
+                    <td class="newpass">비밀번호 확인</td>
+                    <td ><input class="input-newpass" type="test" name="pass" placeholder="비밀번호 입력 확인"></td>
               </tr>   
             </table>
             <div><p>개인정보 입력</p></div>
             <table>
                 <tr>
-                    <td class="highlight">이름</td>
-                    <td><input class="highlight3" type="text" name="name" value="이름 입력"></td>
+                    <td class="name">이름</td>
+                    <td><input class="input-name" type="text" name="name" placeholder="이름 입력"></td>
                 </tr>
                 <tr>
-                    <td class="highlight">별명</td>
-                    <td><input class="highlight3" type="text" name="name" value="별명 입력"><button type="submit">중복확인</button></td>
+                    <td class="nicname">별명</td>
+                
+                    <td>
+                        <p class="nameText">공백없는 한글, 영문, 숫자 입력</p>
+                        <input class="input=nicname" type="text" name="name" placeholder="별명 입력">
+                        <a href="#" class="centered-link2">
+                           <img src="../images/chk_id.gif" alt="중복확인">
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="highlight">이메일</td>
-                    <td><input class="highlight3" type="text" name="name" value="이메이 입력"><button type="submit">인증번호 받기</button></td>
+                    <td class="email">이메일</td>
+                    <td><input class="input-email" type="text" name="name" placeholder="이메일 입력">
+                        <a href="#" class="centered-link3">
+                            <img src="../images/chk_auth.gif" alt="인증번호 받기">
+                        </a>
                 </tr>
                 <tr>
-                    <td class="highlight">휴대폰</td>
-                    <td><input class="highlight3" type="text" name="name" value="휴대폰 이벽"></td>
+                    <td class="hp">휴대폰</td>
+                    <td><input class="highlight3" type="text" name="name" placeholder="휴대폰 입력"></td>
                 </tr>
                 <tr>
-                    <td class="highlight1">주소</td>
-                    <td><input class="highlight3" type="text" name="name" value=""><button type="submit">우편번호찾기</button></td>
+                    <td class="addr" rowspan="3">주소</td>
+                    <td><input class="input-addr" type="text" name="zipcode" placeholder="우편번호">
+                      <a href="#" class="centered-link4">
+                            <img src="../images/chk_post.gif" alt="우편번호 찾기">
+                      </a>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><input class="inputlight" type="text" name="address" placeholder="주소 검색"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="inputlight" type="text" name="detailAddress" placeholder="상세주소 입력"></td>
+                    </tr>
                 </tr>
             </table>
         </form>
@@ -124,7 +215,7 @@
     </main>
     <footer>
         <div>
-            <a>Copyight@김청학(개발에반하다)</a>
+            <p>Copyight@김청학(개발에반하다)</p>
         </div>
     </footer>
 </body>
