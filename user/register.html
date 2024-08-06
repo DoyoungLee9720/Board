@@ -114,13 +114,19 @@
         border: 1px solid #bebebe;
         font-size: 12px;
         background: white;
+       
     }
-    .but2{
+    .but2 {
         border: 1px solid #bebebe;
         background: #efefef;
         width: 66px;
         height: 35px;
         font-size: 12px;
+    }
+    .but3{
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none; /* 기본 밑줄 제거 */
     }
     
     footer{
@@ -219,8 +225,8 @@
             </table>
         </form>
         <div>
-            <button class="but1">취소</button>
-            <button class="but2" type="submit">회원가입</button>
+            <button class="but1"><a class="but3" href="../user/login.html">취소</a></button>
+            <button class="but2" type="submit"><a class="but3" href="../user/login.html">회원가입</a></button>
         </div>
         </section>
     </main>
