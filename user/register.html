@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원가입</title>
     <style>
     
   
     *{
-       font-size: 12px; 
-       font-family: '맑은 고딕'
+    padding: 0;
+    margin: 0;
+    font : normal 12px 'noto sans';
+}
+header,footer{
+    padding-top: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+header>h3{
+    position: relative;
+    left: -100px;
+}
+    * input{
+        border: 1px solid #e4eaec;
+        background: #f7f7f7;
+   
+    }
+    p{
+      margin: 5px 0;
+      font-weight: bold;
     }
    
     main{
@@ -27,9 +46,7 @@
     }
     #uid > form{
         width: 600px;
-        height: auto;
-        
-        padding: 10px;
+        height: auto;   
         box-sizing: border-box;
     }
        table{
@@ -40,7 +57,7 @@
     .uid, .pass, .newpass {
         background: #f0f0f0;
         width: 105px;
-        height: 37px;
+        height: 10px;
 
     }
     table {
@@ -51,13 +68,16 @@
 
         table td {
             border: 2px solid #dddddd; /* 연한 회색 테두리 */
-            padding: 8px; /* 셀 패딩 추가 */
+            padding: 6px; /* 셀 패딩 추가 */
         }
 
     .name, .nicname, .email, .hp{
         background: #f0f0f0;
         width: 105px; 
-        height: 37px;
+        height: 10px;
+    }
+    .input_name, .input_nicname{
+
     }
     main * input{
     width: 164px;
@@ -69,28 +89,27 @@
     }
     .centered-link1{
         position: absolute;;
-        top: 17px;
-        left: 184px;
+        left: 177px;
     }    
     .centered-link2{
         position: absolute;;
-        top: 50px;
-        left: 184px;
-    }    
+        left: 177px;
+    }    s
     .centered-link3{
         position: absolute;;
-        top: 17px;
-        left: 184px;
+        top: 15px;
+        left: 177px;
     }    
     .centered-link4{
         position: absolute;;
-        top: 11px;
-        left: 184px;
+        top: 7px;
+        left: 177px;
     }    
 
     .inputlight{
         width: 360px;
-        height: 17px;
+        height: 24px;
+          border: 1px solid #e4eaec;
     }
     .addr{
         background-color: #f0f0f0;
@@ -103,10 +122,12 @@
         float: right;
     }
     .nameText{
+        margin: 0px;
+        padding-bottom: 5px;
         font-size: 12px;
-        font: inter;
         font-family: '맑은 고딕';
         font-weight: bold; /* 두꺼운 폰트 설정 */
+        
     }
     .but1{
         width: 42px;
@@ -157,6 +178,8 @@
     
     </style>
 </head>
+<header>
+    <h3>Board System</h3></header>
 <body>
     <main>
         <section id="uid">
@@ -235,7 +258,7 @@
     </main>
     <footer>
         <div>
-            <p>Copyight@김철학(개발에반하다)</p>
+            <h3>Copyight@김철학(개발에반하다)</h3>
         </div>
     </footer>
 </body>
