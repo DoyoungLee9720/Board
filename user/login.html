@@ -110,13 +110,32 @@
         margin: 0 5px;
         font-size: 12px;
     }
+    footer {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+          
+        }
+
+        footer > div {
+            width: 790px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    
     </style>
 </head>
 <body>
     <main>
         <section>
             <article id="login">
-                <form action="submit" method="post" class="login-form">
+                <form action="../article/" method="post" class="login-form">
 
                     <table>
                         <tr>
@@ -140,12 +159,19 @@
                     <br><a href="#">아직 회원이 아니시면 회원으로 가입하세요</a>
                 </div>
                 <div class="links">
-                    <a href="#">아이디</a> |
-                    <a href="#">비밀번호찾기</a>| 
-                    <a href="../user/register.html">회원가입</a>
+                    <a href="../user/findId.html">아이디</a> |
+                    <a href="../user/findPass.html">비밀번호찾기</a>| 
+                    <a href="../user/terms.html">회원가입</a>
+
                 </div>    
             </article>
         </section>        
     </main>
+    <footer>
+        <div>
+            <p>Copyright @ 김철학 (개발에반하다)</p>
+        </div>
+    </footer>
+    
 </body>
 </html>
