@@ -27,13 +27,16 @@
       outline: none;
     }
 
+    #wrapper{
+      width:800px;
+      margin: 0 auto;
+    }
     main {
       width: 600px;
       height: 578px;
       box-sizing: border-box;
       margin: 0 auto;
-      margin-top: 95px;
-      
+      margin-top: 80px;
       position: relative;
     }
 
@@ -42,15 +45,19 @@
       margin-top: 16px;
       height: 507px;
     }
-    p{
-      margin: 5px 0;
-      font-weight: bold;
-    }
+    
     header {
-      margin: 0 auto;
       width: 800px;
+      margin: 0 auto;
     }
     .title {
+      margin-top:10px;
+      font-size: 10px;
+      line-height: 12.25px;
+    }
+    .subtitle {
+      margin: 5px 0;
+      font-weight: bold;
     }
     .myInfoSet {
       width: 100%;
@@ -84,7 +91,8 @@
       margin-bottom: 0px;
     }
     tbody {
-      border: 2px solid black;
+      border:1px solid black;
+      border-top: 2px solid black;
     }
     td {
       border: 1px solid #E9E9E9;
@@ -195,17 +203,18 @@
 </head>
 
 <body>
-  <header><p class="title">Board System</p></header>
+  <div id="wrapper">
+  <header><h3 class="title">Board System</h3></header>
   
   <main>
     <section>
       <form action="#">
-        <p>회원정보 설정</p>
+        <p class="subtitle">회원정보 설정</p>
         <table class="myInfoSet">
           <tbody>
             <tr>
               <td class="col1">아이디</td>
-              <td class="col2">abc</td>
+              <td class="col2"><p>abc</p></td>
             </tr>
             <tr>
               <td class="col1">비밀번호</td>
@@ -222,11 +231,11 @@
             </tr>
             <tr>
               <td class="col1">회원가입날짜</td>
-              <td class="col2">2022-01-01 12:45:12</td>
+              <td class="col2"><p>2022-01-01 12:45:12</p></td>
             </tr>
           </tbody>
         </table>
-        <p>개인정보 수정</p>
+        <p class="subtitle">개인정보 수정</p>
         <table class="myInfoChan">
           <tbody>
           <tr>
@@ -280,7 +289,7 @@
     </section>
   </main>
   <footer><p class="copyRight">ⓒCopyright chhak.or.kr</p></footer>
-  
+</div>
 </body>
 
 </html>
