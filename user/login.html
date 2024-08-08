@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-    body {
-        margin: 0;
-        width: 100%;
-        height: 100vh; /* 전체 화면 높이를 차지하도록 설정 */
+ *{
+    padding: 0;
+    margin: 0;
+    font : normal 12px 'noto sans';
+}
+header,footer{
+    padding-top: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+header>h3{
+    position: relative;
+    left: -100px;
+}
+    main {
+        width: 790px;
+        background-color: #fff;
+        padding: 100px;
+        margin: 0 auto;
         display: flex;
+        box-sizing: border-box;
+        flex-direction: column; /* 정렬방향 수직*/
         justify-content: center; /* 수평 가운데 정렬 */
         align-items: center; /* 수직 가운데 정렬 */
-        border: 1px solid;
+    }
+    main section:nth-of-type(2){
+        border-top: 1px solid #ddd;
+    }
+    main>#container{
+        border: 1px solid #ddd;
+        width: 360px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
     }
-    * {
-        font: '맑은고딕';
-        font-weight: bold; /* 텍스트 두껍게 설정 */
-    }
-    main {
-        width: 360px;
-        border: 1px solid #ddd;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-   
     
     #login {
         width: 100%;
         margin-bottom: 20px;
         }
     
-        .login-form {
+    .login-form {
         width: 100%;
         height: 100%;
         display: flex;
@@ -48,13 +60,11 @@
         width: 100%;
     }
 
-    td {
-        vertical-align: middle;
-    }
-
     img {
         width: 20px;
         height: 16.83px;
+        position: relative;
+        top:2px;
     }
 
     input {
@@ -62,9 +72,6 @@
         padding: 5px;
         border: 1px solid #ccc;
         font-size: 10px;
-    }
-    .new{
-        border: 2px solid #dddddd;
     }
     button {
         font-size: 12px; /* 버튼 텍스트 크기 */
@@ -86,19 +93,22 @@
         height: 10px;
     }
     .pin {
-        padding: 10px;
+        padding: 20px;
+        box-sizing: border-box;
         background-color: #f5f6fa;
-        border-radius: 5px;
+        font-weight: bold;
     }
 
-    .ex-links a {
-        color: black;
-        text-decoration: none;
-        margin: 0 12px;
+    .ex-links {
+        margin: 0;
         font-size: 12px;
-        line-height: 35px;
+        line-height: 15px;
     }
-
+    .ex-links>h3{
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 13px;
+    }
     .links {
         text-align: right;
         margin-top: 5px;
@@ -111,65 +121,71 @@
         font-size: 12px;
     }
     footer {
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-            position: absolute;
-            bottom: 0;
-            padding: 10px;
-          
-        }
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
 
-        footer > div {
-            width: 790px;
-            margin: 0 auto;
-        }
-
-        footer p {
-            margin: 0;
-        }
+    footer > div {
+        width: 790px;
+        margin: 0 auto;
+    }
+    footer p {
+        font-size: 12px;
+        font-weight: lighter;
+        width: auto;
+    }
+    footer p:nth-of-type(2){
+        float: right;
+    }
     
     </style>
 </head>
 <body>
+    <header>
+        <h3>Board System</h3>
+    </header>
     <main>
-        <section>
-            <article id="login">
-                <form action="../article/" method="post" class="login-form">
-
-                    <table>
-                        <tr>
-                            <td><img src="../images/login_ico_id.png" alt="ID Icon"></td>
-                            <td><input id="id" type="text" name="uid" placeholder="아이디입력"></td>
-                            <td rowspan="2"><button type="submit" class="btn" align="">로그인</button></td>
-                        </tr>
-                        <tr>
-                            <td><img src="../images/login_ico_pw.png" alt="Password Icon"></td>
-                            <td><input id="pw" type="password" name="pass" placeholder="비밀번호입력"></td>
-                        </tr>
-                    </table>
-
-                </form>
-            </article>
-        </section >
-        <section class="new">
-            <article class="pin">
-                <div class="ex-links">
-                    <a href="#">회원 로그인 안내</a>
-                    <br><a href="#">아직 회원이 아니시면 회원으로 가입하세요</a>
-                </div>
-                <div class="links">
-                    <a href="../user/findId.html">아이디</a> |
-                    <a href="../user/findPass.html">비밀번호찾기</a>| 
-                    <a href="../user/terms.html">회원가입</a>
-
-                </div>    
-            </article>
-        </section>        
+        <div id="container">
+            <section>
+                <article id="login">
+                    <form action="../article/list.html" method="post" class="login-form">
+    
+                        <table>
+                            <tr>
+                                <td><img src="../images/login_ico_id.png" alt="ID Icon"></td>
+                                <td><input id="id" type="text" name="uid" placeholder="아이디 입력" required></td>
+                                <td rowspan="2"><button type="submit" class="btn" align="">로그인</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../images/login_ico_pw.png" alt="Password Icon"></td>
+                                <td><input id="pw" type="password" name="pass" placeholder="비밀번호 입력" required></td>
+                            </tr>
+                        </table>
+    
+                    </form>
+                </article>
+            </section>
+            <section class="new">
+                <article class="pin">
+                    <div class="ex-links">
+                        <h3>회원 로그인 안내</h3>
+                        아직 회원이 아니시면 회원으로 가입하세요
+                    </div>
+                    <div class="links">
+                        <a href="../user/findId.html">아이디</a> |
+                        <a href="../user/findPass.html">비밀번호찾기</a>| 
+                        <a href="../user/terms.html">회원가입</a>
+    
+                    </div>    
+                </article>
+            </section>        
+        </div>
     </main>
     <footer>
         <div>
             <p>Copyright @ 김철학 (개발에반하다)</p>
+            <p>v1.0.1</p>
         </div>
     </footer>
     
