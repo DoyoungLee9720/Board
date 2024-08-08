@@ -54,17 +54,18 @@
     }
     .myInfoSet {
       width: 100%;
-      border: 2px solid black;
+      border: 1px solid black;
       box-sizing: border-box;
       margin-bottom: 20px;
     }
     .myInfoChan{
       width: 100%;
-      border: 2px solid black;
+      
       box-sizing: border-box;
     }
     table{
-    border-collapse: collapse;
+      
+      border-collapse: collapse;
     }
     .addr{
       display: inline-block;
@@ -82,8 +83,19 @@
       width : 362px;
       margin-bottom: 0px;
     }
-    th, td {
+    tbody {
+      border: 2px solid black;
+    }
+    td {
       border: 1px solid #E9E9E9;
+      border-top : none;
+      border-right: none;
+    }
+    table tr:nth-last-of-type(1)> td{
+      border-bottom: none;
+    }
+    .col1{
+      border-left : none;
     }
     .col1 {
     background-color: #F5F8F9;
@@ -96,7 +108,7 @@
     }
     .col2 {
     text-align: left;
-    padding : 5px 5px;
+    padding : 6px 12.5px;
     }
     .nicknameP {
       margin : 0 0;
@@ -190,6 +202,7 @@
       <form action="#">
         <p>회원정보 설정</p>
         <table class="myInfoSet">
+          <tbody>
             <tr>
               <td class="col1">아이디</td>
               <td class="col2">abc</td>
@@ -197,13 +210,13 @@
             <tr>
               <td class="col1">비밀번호</td>
               <td class="col2">
-                  <input type="password" name="pswd" maxlength="16" placeholder="비밀번호 입력">
+                  <input class="txt" type="password" name="pswd" maxlength="16" placeholder="비밀번호 입력">
               </td>
             </tr>
             <tr>
               <td class="col1">비밀번호 확인</td>
               <td class="col2">
-                  <input type="password" name="pswdCheck" maxlength="16" placeholder="비밀번호 입력 확인">
+                  <input class="txt" type="password" name="pswdCheck" maxlength="16" placeholder="비밀번호 입력 확인">
                   <input class='button changePass' type="button" value="비밀번호 수정" onclick="">
               </td>
             </tr>
@@ -211,13 +224,15 @@
               <td class="col1">회원가입날짜</td>
               <td class="col2">2022-01-01 12:45:12</td>
             </tr>
+          </tbody>
         </table>
         <p>개인정보 수정</p>
         <table class="myInfoChan">
+          <tbody>
           <tr>
             <td class="col1">이름</td>
             <td class="col2">
-              <input type="text" name="name" maxlength="16">
+              <input class="txt" type="text" name="name" maxlength="16">
           </td>
           </tr>
           <tr>
@@ -231,14 +246,14 @@
           <tr>
             <td class="col1">이메일</td>
             <td class="col2">
-                <input class="txt" type="text" name="email" maxlength="16" placeholder="이메일 입력">
+                <input class="txt" type="email" name="email" maxlength="16" placeholder="이메일 입력">
                 <input class='button emailButton' type="button"  onclick="">
             </td>
           </tr>
           <tr>
             <td class="col1">휴대폰</td>
             <td class="col2">
-                <input class="txt" type="text" name="phone" maxlength="30" placeholder="휴대폰 입력">
+                <input class="txt" type="tel" name="phone" maxlength="30" placeholder="휴대폰 입력">
             </td>
           </tr>
           <tr>
@@ -256,10 +271,11 @@
               <input class="button userOut" type="button"  value="탈퇴하기" onclick="" >
             </td>
           </tr>
+        </tbody>
       </table>
       
-      <input class="button cancle" type="button"  value="취소" onclick="" >
-      <input class="button confirm" type="button"  value="회원수정" onclick="" >
+      <input class="button cancle" type="button"  value="취소" onclick=" location.href = '../article/list.html' " >
+      <input class="button confirm" type="button"  value="회원수정" onclick="location.href = '../article/list.html' " >
       </form>
     </section>
   </main>
